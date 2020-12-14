@@ -1,0 +1,281 @@
+@color1: #036eb8; //主题色
+@font1: #0a4e80; //查看更多
+@font2: #0c8ee7;
+/*@border: #ced4da; //边框色
+@font1: #888; //字体色
+@font2: #9e9e9e; //字体色
+@font3: #e8621e;*/
+
+//子页面banner
+#pages-banner{
+    height: 800px;
+    background: #ebebeb;
+    position: relative;
+}
+#pages-banner::after{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+//子页面标题导航
+#pages-title-container{
+    height: 200px;
+    position: absolute;
+    top: 20.5%;
+    width: 100%;
+    .main-center{
+        height: 100%;
+        display: flex;
+        .pages-title-left{
+            width: 20%;
+            height: 100%;
+            padding: 2%;
+            color: #ebebeb;
+            border: 2px solid #c0bdbd;
+            .pages-tl-one{
+                position: absolute;
+                font-size: 34px;
+                left: 19%;
+                letter-spacing: 2px;
+                text-align: center;
+            }
+            .pages-tl-two{
+                font-size: 45px;
+                left: 19%;
+                top: 43%;
+                position: absolute;
+            }
+        }
+        .pages-title-right{
+            width: 80%;
+            height: 100%;
+            position: relative;
+            ul{
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                display: flex;
+                justify-content: flex-end;
+                li{
+                    padding: 20px;
+                    font-size: 24px;
+                    position: relative;
+                    
+                }
+                .pages-a-active{
+                    border-bottom: 1px solid black;
+                }
+                li:hover{
+                    cursor: pointer;                   
+                }
+            }
+            
+        }
+    }
+}
+
+//品牌介绍内容
+.about-brief1-4{
+    width: 40%;
+    height: 90%;
+    position: absolute;
+    top: 20.5%;
+    padding-left: 5%;
+    .about-b1-4-title{
+        font-size: 45px;
+        font-weight: bold;
+        color: white;
+        line-height: 70px;
+        font{
+            font-style: italic;
+        }
+    }
+    .about-b1-4-content{
+        bottom: 0;
+        font-size: 22px;
+        color: white;
+        padding-top: 10%;
+        line-height: 32px;
+        position: relative;
+    }
+    
+}
+
+//品牌介绍布局
+.about-brief2-1{
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    right: 0;
+    top: 16.5%;
+    background: #1A1A1A ;
+}
+.about-brief2-3{
+    width: 60%;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    background: #ebebeb;
+}
+
+
+
+main{
+    position: relative;
+    #about-container{
+        padding-top: 7%;
+        #about-block{
+            .main-center{
+                .about-brief1{
+                    height: 500px;
+                    padding: 60px 0;
+                    position: relative;
+                    .about-brief1-1{
+                        width: 60%;
+                        height: 30%;
+                        background: @color1;
+                    }
+                    .about-brief1-2{
+                        width: 97%;
+                        height: 95%;
+                        position: absolute;
+                        right: 0;
+                        background: #1A1A1A;
+                    }
+                    .about-brief1-3{
+                        width: 60%;
+                        right: 0;
+                        top: 22.5%;
+                        position: absolute;
+                        height: 100%;
+                        background: #ebebeb;
+                    }
+                    .about-b1-4-content::after{
+                        content: " ";
+                        width: 100%;
+                        height: 4px;
+                        bottom: -60%;
+                        background: @font2;
+                        position: absolute;
+                    }
+                }
+
+                .about-brief2{
+                    height: 500px;
+                    margin-top: 23%;
+                    position: relative;
+                    
+                    .about-brief2-2{
+                        width: 20%;
+                        height: 50%;
+                        position: absolute;
+                        bottom: -15%;
+                        left: 63%;
+                        transform: translateX(-63%);
+                        background: @color1;
+                    }
+                    .about-brief2-3{
+                        left: 0;
+                    }
+                    .about-brief2-3::after{
+                        content: " ";
+                        width: 4px;
+                        height: 70%;
+                        left: 10%;
+                        bottom: -60%;
+                        z-index: 1;
+                        position: absolute;
+                        background: @font2;
+                    }
+                    .about-brief2-4{
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+
+                .about-brief3{
+                    height: 500px;
+                    margin-top: 16%;
+                    position: relative;
+                    .about-brief2-3{
+                        right: 0;
+                    }
+                    .about-brief3-2{
+                        width: 80%;
+                        height: 16%;
+                        bottom: -12%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: @color1;
+                        position: absolute;
+                    }
+                }
+            }
+
+            .about-data{
+                margin-top: 10%;
+            }
+
+        }
+    }
+  
+    #case-container {
+        padding: 3% 0;
+    
+        //第一版样式
+        .case-category{
+            display: flex;
+            height: 360px;
+            padding-bottom: 3%;
+            border-bottom: 1px solid #343434;
+            margin-bottom: 5%;
+            .case-cate-left{
+                width: 50%;
+                .case-cate-p1{
+                    transition: ease 0.3s;
+                    font-size: 90px;
+                }
+                .case-right-p1,
+                .case-right-p2{
+                    text-align: right;
+                }
+                .case-right-p3{
+                    padding-right: 0 !important;
+                    padding-left: 10%;
+                }
+                .case-cate-p2{
+                    font-size: 36px;
+                    padding: 2% 0;
+                    font{
+                        font-weight: bold;
+                    }
+                }
+                .case-cate-p3{
+                    font-size: 20px;
+                    padding-right: 10%;
+                    line-height: 32px;
+                }
+                .case-cate-p4{
+                    padding: 5% 0;
+                    font-size: 20px;
+                }
+            }
+            .case-cate-right{
+                width: 50%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .case-categroy-p1-active{
+            .case-cate-p1{
+                color: @font1;
+            }
+        }
+    }
+}
